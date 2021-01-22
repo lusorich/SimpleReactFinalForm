@@ -1,0 +1,27 @@
+@import 'mixins.scss';
+
+.form-header {
+  padding: 0 30px;
+}
+
+.form-header > .form-header__title {
+  padding-bottom: 8px;
+}
+
+.form-header__title {
+  @include fontIBMPlex700;
+  @include fontStyle(34px, 44px);
+  margin: 0;
+}
+
+.form-header__login {
+  color: rgba(8, 128, 174, 1);
+  text-decoration: none;
+  padding-left: 6px;
+}
+
+.form-header__desc {
+  @include fontIBMPlex400;
+  @include fontStyle;
+  margin: 0;
+}

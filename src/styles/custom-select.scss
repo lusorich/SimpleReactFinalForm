@@ -1,0 +1,82 @@
+@import 'mixins.scss';
+
+.custom-select {
+  position: relative;
+}
+
+.custom-select__title-wrapper:focus > .custom-select__title--grey {
+  color: #000;
+}
+
+.custom-select__title-wrapper {
+  @include fontIBMPlex400;
+  @include fontStyle;
+  border: 1px solid #dbe2ea;
+  border-radius: 6px;
+  box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+  padding: 16px 10px 15px 16px;
+  box-sizing: border-box;
+  min-width: 100%;
+  color: #7c9cbf;
+}
+
+.custom-select__title-wrapper::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 9.09px;
+  right: 14px;
+  margin-top: 9px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16' height='9' viewBox='0 0 16 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg fill='rgb(8, 128, 174)' stroke-width='0.3' stroke='green'%3e%3cpath d='M8 6.58579L14.2929 0.292893C14.6834 -0.0976311 15.3166 -0.0976311 15.7071 0.292893C16.0976 0.683418 16.0976 1.31658 15.7071 1.70711L8.70711 8.70711C8.31658 9.09763 7.68342 9.09763 7.29289 8.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683418 0.292893 0.292893C0.683418 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L8 6.58579Z'/%3e%3c/g%3e%3c/svg%3e");
+}
+
+.custom-select__title-wrapper:focus {
+  outline: none;
+  border: 2px solid #0880ae;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+  border-radius: 6px;
+}
+
+.custom-select__title--grey {
+  color: #7c9cbf;
+}
+
+.custom-select__title--black {
+  color: #000;
+}
+
+.custom-select__list {
+  margin: 4px 0 0 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  border: 1px solid #dbe2ea;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04),
+    0px 20px 20px rgba(44, 39, 56, 0.04);
+  border-radius: 6px;
+}
+
+.custom-select__item {
+  @include fontIBMPlex400;
+  @include fontStyle;
+  list-style-type: none;
+  padding: 12px 0 12px 16px;
+  color: rgba(117, 111, 134, 1);
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.custom-select__item:hover {
+  background: #ebf4f8;
+}
+
+.custom-select__list li:first-child {
+  padding-top: 24px;
+}
+
+.custom-select__list li:last-child {
+  padding-bottom: 24px;
+}

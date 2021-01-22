@@ -1,0 +1,130 @@
+@import 'mixins.scss';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px;
+  margin-top: 24px;
+}
+
+.form__field-title {
+  @include fontIBMPlex500;
+  @include fontStyle;
+  margin: 0 0 6px 0;
+  color: rgba(117, 111, 134, 1);
+}
+
+.form__field-wrapper {
+  margin-top: 34px;
+  min-width: 225px;
+  z-index: 1;
+}
+
+.form__field {
+  @include fontIBMPlex400;
+  @include fontStyle;
+  border: 1px solid #dbe2ea;
+  border-radius: 6px;
+  box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+  padding: 16px 10px 15px 16px;
+  box-sizing: border-box;
+  min-width: 100%;
+}
+
+.form__field:focus {
+  outline: none;
+  border: 2px solid #0880ae;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+  border-radius: 6px;
+}
+
+.form__field::placeholder {
+  @include fontIBMPlex400;
+  @include fontStyle;
+  color: #7c9cbf;
+  padding: 8px 0;
+}
+
+.form__field-error {
+  @include fontIBMPlex400;
+  @include fontStyle(14px, 19px);
+  color: #ff6666;
+  margin-top: 8px;
+  display: inline-block;
+}
+
+.form__label {
+  @include fontIBMPlex500;
+  @include fontStyle;
+  display: block;
+  position: relative;
+  margin: 0 0 42px 36px;
+  color: rgba(117, 111, 134, 1);
+}
+
+.form__label > a {
+  text-decoration: none;
+  color: rgb(8, 128, 174);
+}
+
+.form__label::before {
+  cursor: pointer;
+  content: '';
+  border: 1px solid #dbe2ea;
+  box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+  width: 28px;
+  height: 28px;
+  top: -4px;
+  left: -35px;
+  position: absolute;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.form__label::after {
+  cursor: pointer;
+  content: '';
+  display: none;
+  position: absolute;
+  top: 4px;
+  left: -29px;
+  width: 16px;
+  height: 12px;
+  background-image: url("data:image/svg+xml;charset=UTF-8, %3csvg width='16' height='12' viewBox='0 0 16 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg fill='rgb(8, 128, 174)' stroke-width='0.3' stroke='green'%3e%3cpath d='M14.6343 0.634308C14.9467 0.321889 15.4533 0.321889 15.7657 0.634308C16.0781 0.946728 16.0781 1.45326 15.7657 1.76568L6.16567 11.3657C5.85325 11.6781 5.34672 11.6781 5.0343 11.3657L1.0343 7.36568C0.721883 7.05326 0.721883 6.54673 1.0343 6.23431C1.34672 5.92189 1.85325 5.92189 2.16567 6.23431L5.59999 9.66862L14.6343 0.634308Z'/%3e%3c/g%3e%3c/svg%3e");
+}
+
+.form__checkbox:checked + .form__label::after,
+.form__checkbox:checked ~ .form__label::after {
+  display: block;
+}
+
+.form__button {
+  @include fontIBMPlex500;
+  @include fontStyle;
+  min-height: 56px;
+  min-width: 100%;
+  background: #0880ae;
+  box-shadow: 0px 2px 4px rgba(44, 39, 56, 0.08),
+    0px 4px 8px rgba(44, 39, 56, 0.08);
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.form__button:disabled {
+  background: #dbe2ea;
+  box-shadow: 0px 2px 4px rgba(44, 39, 56, 0.08),
+    0px 4px 8px rgba(44, 39, 56, 0.08);
+  border-radius: 6px;
+  color: rgba(177, 181, 191, 1);
+}
+
+.form__field-wrapper.form__field-wrapper--last {
+  z-index: 0;
+}
+
+.form__button-wrapper {
+  min-width: 225px;
+}
