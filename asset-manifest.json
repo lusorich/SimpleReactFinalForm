@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/SimpleReactFinalForm/static/css/main.87afaad7.chunk.css",
+    "main.js": "/SimpleReactFinalForm/static/js/main.de3868df.chunk.js",
+    "main.js.map": "/SimpleReactFinalForm/static/js/main.de3868df.chunk.js.map",
+    "runtime-main.js": "/SimpleReactFinalForm/static/js/runtime-main.613f5ced.js",
+    "runtime-main.js.map": "/SimpleReactFinalForm/static/js/runtime-main.613f5ced.js.map",
+    "static/js/2.4376b6c2.chunk.js": "/SimpleReactFinalForm/static/js/2.4376b6c2.chunk.js",
+    "static/js/2.4376b6c2.chunk.js.map": "/SimpleReactFinalForm/static/js/2.4376b6c2.chunk.js.map",
+    "index.html": "/SimpleReactFinalForm/index.html",
+    "static/css/main.87afaad7.chunk.css.map": "/SimpleReactFinalForm/static/css/main.87afaad7.chunk.css.map",
+    "static/js/2.4376b6c2.chunk.js.LICENSE.txt": "/SimpleReactFinalForm/static/js/2.4376b6c2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.613f5ced.js",
+    "static/js/2.4376b6c2.chunk.js",
+    "static/css/main.87afaad7.chunk.css",
+    "static/js/main.de3868df.chunk.js"
+  ]
+}
